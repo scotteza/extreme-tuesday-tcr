@@ -5,29 +5,30 @@ namespace ExtremeTuesday.Tests
     [TestFixture]
     internal class FibonacciShould
     {
+        protected internal Fibonacci _fibonacci;
+
+        [SetUp]
+        public void SetUp()
+        {
+            _fibonacci = new Fibonacci();
+        }
+
         [Test]
         public void Return_Zero_On_Zero_Input()
         {
-            var fibonacci = new Fibonacci();
-
-            var result = fibonacci.Of(0);
-
-            Assert.That(result, Is.EqualTo(0));
+            Assert.That(_fibonacci.Of(0), Is.EqualTo(0));
         }
 
         [Test]
         public void Return_Zero_On_One_Input()
         {
-            Fibonacci fibonnaci = new Fibonacci();
-            int result = fibonnaci.Of(1);
-            Assert.That(result, Is.EqualTo(1));
+            Assert.That(_fibonacci.Of(1), Is.EqualTo(1));
         }
 
         [Test]
         public void Return_One_For_Two_input()
         {
-            int result = new Fibonacci().Of(2);
-            Assert.That(result, Is.EqualTo(1));
+            Assert.That(_fibonacci.Of(2), Is.EqualTo(1));
         }
  
 
