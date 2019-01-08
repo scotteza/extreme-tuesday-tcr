@@ -23,8 +23,13 @@ namespace ExtremeTuesday.Tests
             Assert.That(result, Is.EqualTo(1));
         }
 
-
-
+        [Test]
+        public void Return_One_For_Two_input()
+        {
+            int result = new Fibonacci().Of(2);
+            Assert.That(result, Is.EqualTo(1));
+        }
+ 
 
     }
 }
