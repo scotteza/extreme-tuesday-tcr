@@ -14,5 +14,17 @@ namespace ExtremeTuesday.Tests
 
             Assert.That(result, Is.EqualTo(0));
         }
+
+        [Test]
+        public void Return_Zero_On_One_Input()
+        {
+            Fibonacci fibonnaci = new Fibonacci();
+            int result = fibonnaci.Of(1);
+            Assert.That(result, Is.EqualTo(1));
+        }
+
+
+
+
     }
 }
