@@ -25,12 +25,13 @@ namespace ExtremeTuesday.Tests
             Assert.That(_fibonacci.Of(1), Is.EqualTo(1));
         }
 
-        [Test]
-        public void Return_One_For_Two_input()
+        [TestCase(0,0)]
+        [TestCase(1,1)]
+        [TestCase(2,1)]
+        public void Return_One_For_Two_input(int input, int expected)
         {
-            Assert.That(_fibonacci.Of(2), Is.EqualTo(1));
+            Assert.That(_fibonacci.Of(input), Is.EqualTo(expected));
         }
  
-
     }
 }
